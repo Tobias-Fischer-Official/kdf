@@ -1,0 +1,95 @@
+PADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../com/installshield/product/LegacySoftwareObjectUtils.html#LegacySoftwareObjectUtils()">LegacySoftwareObjectUtils</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/LegacySoftwareObjectUtils.html#transferStaticProperties(com.installshield.product.LegacySoftwareObject, com.installshield.product.LegacySoftwareObject)">transferStaticProperties</A></B>(<A HREF="../../../com/installshield/product/LegacySoftwareObject.html">LegacySoftwareObject</A>&nbsp;oldObj,
+                         <A HREF="../../../com/installshield/product/LegacySoftwareObject.html">LegacySoftwareObject</A>&nbsp;newObj)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transfers "static" properties (ie.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/LegacySoftwareObjectUtils.html#updateKey(com.installshield.product.SoftwareObjectKey, com.installshield.product.SoftwareObjectKey)">updateKey</A></B>(<A HREF="../../../com/installshield/product/SoftwareObjectKey.html">SoftwareObjectKey</A>&nbsp;oldKey,
+          <A HREF="../../../com/installshield/product/SoftwareObjectKey.html">SoftwareObjectKey</A>&nbsp;newKey)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updates an old SoftwareObjectKey with information from a new one.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Methods inherited from class java.lang.Object</B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=1><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TD>
+</TR>
+</TABLE>
+
+<A NAME="LegacySoftwareObjectUtils()"><!-- --></A><H3>
+LegacySoftwareObjectUtils</H3>
+<PRE>
+public <B>LegacySoftwareObjectUtils</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TD>
+</TR>
+</TABLE>
+
+<A NAME="updateKey(com.installshield.product.SoftwareObjectKey, com.installshield.product.SoftwareObjectKey)"><!-- --></A><H3>
+updateKey</H3>
+<PRE>
+public static void <B>updateKey</B>(<A HREF="../../../com/installshield/product/SoftwareObjectKey.html">SoftwareObjectKey</A>&nbsp;oldKey,
+                             <A HREF="../../../com/installshield/product/SoftwareObjectKey.html">SoftwareObjectKey</A>&nbsp;newKey)</PRE>
+<DL>
+<DD>Updates an old SoftwareObjectKey with information from a new one.  This method
+ can be used to update the SoftwareObjectKey of a SoftwareObject, while keeping
+ the information in the two objects completely separate (ie. SoftwareVersion,
+ especially).
+<P>
+<DD><DL>
+<

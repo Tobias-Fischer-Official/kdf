@@ -1,0 +1,294 @@
+rited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Methods inherited from class java.lang.Object</B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=1><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TD>
+</TR>
+</TABLE>
+
+<A NAME="ProductBean()"><!-- --></A><H3>
+ProductBean</H3>
+<PRE>
+public <B>ProductBean</B>()</PRE>
+<DL>
+<DD>The general constructor for a ProductBean object. This constructor
+ creates a new ProductBean, and initializes it with the next available
+ bean ID.
+<P>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TD>
+</TR>
+</TABLE>
+
+<A NAME="setBeanId(java.lang.String)"><!-- --></A><H3>
+setBeanId</H3>
+<PRE>
+public void <B>setBeanId</B>(java.lang.String&nbsp;beanId)</PRE>
+<DL>
+<DD>Sets the bean Id for the ProductBean instance.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>beanId</CODE> - The new bean Id for the ProductBean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBeanId()"><!-- --></A><H3>
+getBeanId</H3>
+<PRE>
+public java.lang.String <B>getBeanId</B>()</PRE>
+<DL>
+<DD>Returns the current bean Id for the ProductBean instance.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The current bean Id for the ProductBean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDisplayName(java.lang.String)"><!-- --></A><H3>
+setDisplayName</H3>
+<PRE>
+public void <B>setDisplayName</B>(java.lang.String&nbsp;displayName)</PRE>
+<DL>
+<DD>Sets the display name for the ProductBean instance. This name represents
+ the name of the ProductBean that is used to present information about the
+ ProductBean to the end-user.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>displayName</CODE> - The new display name for the ProductBean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDisplayName()"><!-- --></A><H3>
+getDisplayName</H3>
+<PRE>
+public java.lang.String <B>getDisplayName</B>()</PRE>
+<DL>
+<DD>Returns the display name for the ProductBean instance. This name
+ represents the name of the ProductBean that is used to present
+ information about the ProductBean to the end-user.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The current display name for the ProductBean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setActive(boolean)"><!-- --></A><H3>
+setActive</H3>
+<PRE>
+public void <B>setActive</B>(boolean&nbsp;active)</PRE>
+<DL>
+<DD>Sets the active state for the ProductBean instance. This state is an
+ indication of whether or not the associated ProductBean will be processed
+ at installation and/or uninstallation time.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>active</CODE> - The new active state for the ProductBean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isActive()"><!-- --></A><H3>
+isActive</H3>
+<PRE>
+public boolean <B>isActive</B>()</PRE>
+<DL>
+<DD>Returns the active state for the ProductBean instance. This state is an
+ indication of whether or not the associated ProductBean will be processed
+ at installation and/or uninstallation time.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The current active state for the ProductBean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setBuildCategories(java.lang.String)"><!-- --></A><H3>
+setBuildCategories</H3>
+<PRE>
+public void <B>setBuildCategories</B>(java.lang.String&nbsp;categories)</PRE>
+<DL>
+<DD>Sets the build categories associated with this bean as a comma-delimited
+ String.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBuildCategories()"><!-- --></A><H3>
+getBuildCategories</H3>
+<PRE>
+public java.lang.String <B>getBuildCategories</B>()</PRE>
+<DL>
+<DD>Returns the build categories associated with this bean as a
+ comma-delimited String.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>Returns a comma-delimited String indicating the categories
+         associated with the bean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="buildCategories()"><!-- --></A><H3>
+buildCategories</H3>
+<PRE>
+public java.util.Dictionary <B>buildCategories</B>()</PRE>
+<DL>
+<DD>Returns a Dictionary of categories that are associated with this Object.
+ Classes that extend ProductBean must override this method to add any
+ additional categories that should become associated with the extended
+ class (ie. associations with PPK's, etc.).
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/installshield/archive/BuildFilterable.html#buildCategories()">buildCategories</A></CODE> in interface <CODE><A HREF="../../../com/installshield/archive/BuildFilterable.html">BuildFilterable</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getProductTree()"><!-- --></A><H3>
+getProductTree</H3>
+<PRE>
+public <A HREF="../../../com/installshield/product/ProductTree.html">ProductTree</A> <B>getProductTree</B>()</PRE>
+<DL>
+<DD>Returns the ProductTree that is associated with the ProductBean. This
+ method provides access to the ProductTree for beans that sub-class the
+ ProductBean abstract class for run-time manipulation and information
+ retrieval purposes.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The ProductTree associated with the ProductBean.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="initialize(com.installshield.wizard.service.WizardServices)"><!-- --></A><H3>
+initialize</H3>
+<PRE>
+public void <B>initialize</B>(<A HREF="../../../com/installshield/wizard/service/WizardServices.html">WizardServices</A>&nbsp;services)</PRE>
+<DL>
+<DD>Initializes the ProductBean with the current instance of WizardServices
+ being utilized by the installation. This makes the facilities of the
+ WizardServices instance (eg. logging capabilities, access to services,
+ transient property storage, resource loading, etc.) available to the
+ ProductBean for run-time use.
+ <P>
+ <STRONG>NOTE </STRONG>: This method may be overidden by a sub-class of
+ ProductBean, but the parent method should always be called.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>services</CODE> - The instance of WizardServices utilized by the
+            installation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getServices()"><!-- --></A><H3>
+getServices</H3>
+<PRE>
+public <A HREF="../../../com/installshield/wizard/service/WizardServices.html">WizardServices</A> <B>getServices</B>()</PRE>
+<DL>
+<DD>Returns the current instance of WizardServices being utilized by the
+ installation. This makes the facilities of the WizardServices instance
+ (e.g., logging capabilities, access to services, transient property
+ storage, resource loading, etc.) available to the ProductBean for
+ run-time use.
+ <P>
+ <STRONG>NOTE </STRONG>: The ProductBean class includes convenience
+ methods to access the WizardServices object for using the string
+ resolver, logging, and services. These convenience methods perform an
+ additional check to ensure that the ProductBean has been initialized, and
+ should be used when utilizing the capabilities of the WizardServices
+ object, rather than using WizardServices directly. These associated
+ methods are as follows:
+ <li><A HREF="#getServices()">getServices() </A></li>
+ <li><A HREF="#logEvent(java.lang.Object, java.lang.String, java.lang.Object)">logEvent() </A></li>
+ <li><A HREF="../wizard/service/WizardLog.html#isEventLogged(java.lang.String)">isEventLogged </A></li>
+ <li><A HREF="../wizard/service/WizardServices.html#resolveString(java.lang.String)">resolveString() </A></li>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The instance of WizardServices utilized by the installation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getExtendedProperties()"><!-- --></A><H3>
+getExtendedProperties</H3>
+<PRE>
+public java.util.Dictionary <B>getExtendedProperties</B>()</PRE>
+<DL>
+<DD>Retrieves any extended properties that are associated with the
+ ProductBean from external sources (e.g., PPKs, etc.).
+ <P>
+ <STRONG>ADVANCED NOTE </STRONG>: The 

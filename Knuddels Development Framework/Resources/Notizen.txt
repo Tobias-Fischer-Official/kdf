@@ -1,0 +1,44 @@
+﻿Thx to 
+
+------- Sky.NET -------
+----------for----------
+Continously developing on KDF since 2008
+Putting together all the parts of parsing, logic and knowledgement of knuddels-coding in this awesome library
+Still developing more and more features for this library
+Recruiting coding-newcomers in the k-scene
+Epic codestyle
+
+--- Grammatikfehler ---
+----------for----------
+Testing, Using KDF in his Software
+Much, much Brainstorming about KDF
+Much token logging, experimenting with server-responses
+Idea to implement Module-Parsing
+
+------- Brainy --------
+----------for----------
+Reversing Module-Token-Parsing and Opensourceing that
+
+-------- 3Lit ---------
+----------for----------
+Reversing Knuddels-Networks
+Writing the awesome KDF Hash-Server
+Looooots of Brainstorming
+Tons of coding with me
+
+------ xe12ijus -------
+----------for----------
+Giving the Idea to Render Chathistory in a WebBrowser
+Writing the base of 'KCode2HTML'
+Brainstorming till Braindead (District 9 still has a Plugin for it, just take a look at the pigeon)
+
+----- K-Script.cc -----
+----------for----------
+
+Providing a big community for Knuddels-Coding
+Hosting KDF-Related content on static sites instead as just forum posts
+
+----- U-Hacks.net -----
+----------for----------
+
+Providing a big community for Knuddels-Coding

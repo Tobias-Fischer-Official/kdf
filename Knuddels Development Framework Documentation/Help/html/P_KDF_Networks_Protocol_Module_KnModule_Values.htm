@@ -1,0 +1,142 @@
+duct/LegacyGenericSoftwareObject.html">LegacyGenericSoftwareObject</A>, <A HREF="../../../com/installshield/product/LegacySoftwareObjectReference.html">LegacySoftwareObjectReference</A>, <A HREF="../../../com/installshield/product/ProductAction.html">ProductAction</A>, <A HREF="../../../com/installshield/product/RequiredAssembly.html">RequiredAssembly</A>, <A HREF="../../../com/installshield/product/SoftwareObjectReference.html">SoftwareObjectReference</A>, <A HREF="../../../com/installshield/product/StaticProductReference.html">StaticProductReference</A></DD>
+</DL>
+<HR>
+<DL>
+<DT>public abstract class <B>ProductBean</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../com/installshield/beans/PropertiesExtendible.html">PropertiesExtendible</A>, <A HREF="../../../com/installshield/util/Log.html">Log</A>, <A HREF="../../../com/installshield/archive/BuildFilterable.html">BuildFilterable</A></DL>
+
+<P>
+The ProductBean abstract class is the base class for the elements that
+ compose the installation ProductTree. This class provides the basic
+ functionality required by all ProductBeans (e.g., ProductFeatures,
+ ProductComponents, ProductActions, etc.) to allow proper run-time
+ functionality through the ProductService. In addition, the ProductBean base
+ class provides methods that allow access to the core functionality of an
+ installation (e.g., services, logging capabilities, string resolver, etc.).
+ <P>
+ <STRONG>CAUTION </STRONG>: This class should not be extended directly when
+ creating a custom ProductBean. Custom ProductBeans should extend the <A
+ HREF="ProductAction.html">ProductAction </A> class.
+ <P>
+ <STRONG>NOTE </STRONG>: The ProductBean class supports the <A
+ HREF="../../../com/installshield/beans/PropertiesExtendible.html">PropertiesExtendible
+ </A> interface. Supporting that interface allows the members of the class to
+ be extended by a PPK. This allows a PPK to add the required additional
+ information and parameters to certain objects for use on the platform(s)
+ supported by the PPK. For example, the Linux PPK utilizes this functionality
+ to allow Linux platform-specific interaction between the "ProductComponent"
+ class and the Linux RPM.
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../com/installshield/product/ProductTree.html"><CODE>ProductTree</CODE></A></DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.installshield.util.Log"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Fields inherited from interface com.installshield.util.<A HREF="../../../com/installshield/util/Log.html">Log</A></B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../com/installshield/util/Log.html#DBG">DBG</A>, <A HREF="../../../com/installshield/util/Log.html#ERROR">ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#INTERNAL_ERROR">INTERNAL_ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#MSG1">MSG1</A>, <A HREF="../../../com/installshield/util/Log.html#MSG2">MSG2</A>, <A HREF="../../../com/installshield/util/Log.html#WARNING">WARNING</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#ProductBean()">ProductBean</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The general constructor for a ProductBean object.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Dictionary</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#buildCategories()">buildCategories</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a Dictionary of categories that are associated with this Object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#getBeanId()">getBeanId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the current bean Id for the ProductBean instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#getBuildCategories()">getBuildCategories</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the build categories associated with this bean as a
+ comma-delimited String.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#getComments()">getComments</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#getDisplayName()">getDisplayName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the display name for the ProductBean instance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.Dictionary</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#getExtendedProperties()">getExtendedProperties</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieves any extended properties that are associated with the
+ ProductBean from external sources (e.g., PPKs, etc.).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../com/installshield/product/ProductTree.html">ProductTree</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductBean.html#getProductTree()">getProductTree</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the ProductTree that is associated with the ProductBean.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../com/installshield

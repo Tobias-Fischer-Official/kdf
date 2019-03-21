@@ -1,0 +1,152 @@
+/../../com/installshield/product/ProductBuilder.html">ProductBuilder</A>, <A HREF="../../../com/installshield/beans/PropertiesExtendible.html">PropertiesExtendible</A>, <A HREF="../../../com/installshield/qjml/PropertyAccessible.html">PropertyAccessible</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html">SoftwareObject</A></DD>
+</DL>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../com/installshield/product/DynamicSuite.html">DynamicSuite</A>, <A HREF="../../../com/installshield/product/StaticSuite.html">StaticSuite</A></DD>
+</DL>
+<HR>
+<DL>
+<DT>public class <B>Product</B><DT>extends <A HREF="../../../com/installshield/product/GenericSoftwareObject.html">GenericSoftwareObject</A><DT>implements <A HREF="../../../com/installshield/product/ProductBuilder.html">ProductBuilder</A></DL>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#DEFAULT_PRECEDENCE">DEFAULT_PRECEDENCE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#PRECEDENCE_SYSTEM_DEFINED">PRECEDENCE_SYSTEM_DEFINED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.installshield.product.SoftwareObject"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Fields inherited from interface com.installshield.product.<A HREF="../../../com/installshield/product/SoftwareObject.html">SoftwareObject</A></B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../com/installshield/product/SoftwareObject.html#ALWAYS_PROMPT">ALWAYS_PROMPT</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#ALWAYS_REMOVE">ALWAYS_REMOVE</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#ALWAYS_REPLACE">ALWAYS_REPLACE</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#CANCEL">CANCEL</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#CANCEL_AND_ROLLBACK">CANCEL_AND_ROLLBACK</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#CONTINUE">CONTINUE</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#DEFAULT">DEFAULT</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#FAILED">FAILED</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#INSTALL_TYPE_ASSEMBLY">INSTALL_TYPE_ASSEMBLY</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#INSTALL_TYPE_NONE">INSTALL_TYPE_NONE</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#INSTALL_TYPE_PRODUCT">INSTALL_TYPE_PRODUCT</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#INSTALLED">INSTALLED</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#INSTALLING">INSTALLING</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#NEVER_REMOVE">NEVER_REMOVE</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#NEVER_REPLACE">NEVER_REPLACE</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#PROMPT_IF_MODIFIED">PROMPT_IF_MODIFIED</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#PROMPT_IF_OLDER">PROMPT_IF_OLDER</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#READY_TO_INSTALL">READY_TO_INSTALL</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#REMOVE_IF_UNMODIFIED">REMOVE_IF_UNMODIFIED</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#REPLACE_IF_NEWER">REPLACE_IF_NEWER</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#REPLACING">REPLACING</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#SUCEEDED">SUCEEDED</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#UNINSTALLED">UNINSTALLED</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#UNINSTALLER_TYPE_DATA_AND_ENGINE">UNINSTALLER_TYPE_DATA_AND_ENGINE</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#UNINSTALLER_TYPE_DATA_ONLY">UNINSTALLER_TYPE_DATA_ONLY</A>, <A HREF="../../../com/installshield/product/SoftwareObject.html#UNINSTALLER_TYPE_NONE">UNINSTALLER_TYPE_NONE</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.installshield.util.Log"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Fields inherited from interface com.installshield.util.<A HREF="../../../com/installshield/util/Log.html">Log</A></B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../com/installshield/util/Log.html#DBG">DBG</A>, <A HREF="../../../com/installshield/util/Log.html#ERROR">ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#INTERNAL_ERROR">INTERNAL_ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#MSG1">MSG1</A>, <A HREF="../../../com/installshield/util/Log.html#MSG2">MSG2</A>, <A HREF="../../../com/installshield/util/Log.html#WARNING">WARNING</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#Product()">Product</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#build(com.installshield.product.ProductBuilderSupport)">build</A></B>(<A HREF="../../../com/installshield/product/ProductBuilderSupport.html">ProductBuilderSupport</A>&nbsp;support)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#getInstallPrecedence()">getInstallPrecedence</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#getLocaleOption()">getLocaleOption</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is method is for InstallShield internal use only.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../com/installshield/product/MSIInstallCondition.html">MSIInstallCondition</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#getMSIInstallCondition(java.lang.String)">getMSIInstallCondition</A></B>(java.lang.String&nbsp;name)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../com/installshield/util/MSIConditionSet.html">MSIConditionSet</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#getMSIInstallConditionSet()">getMSIInstallConditionSet</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#getMSIInstallLocationOverride()">getMSIInstallLocationOverride</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#getMSIProductCodeOverride()">getMSIProductCodeOverride</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Product.html#getMSIReadMe()">getMSIReadMe</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/Prod

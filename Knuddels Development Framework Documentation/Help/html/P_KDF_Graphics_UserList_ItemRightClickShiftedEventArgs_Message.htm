@@ -1,0 +1,170 @@
+rameters:</B><DD><CODE>dirName</CODE> - The name of the directory that should be removed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putUninstallerResource(java.io.InputStream, java.lang.String)"><!-- --></A><H3>
+putUninstallerResource</H3>
+<PRE>
+public void <B>putUninstallerResource</B>(java.io.InputStream&nbsp;in,
+                                   java.lang.String&nbsp;storageName)
+                            throws java.io.IOException</PRE>
+<DL>
+<DD>Indicates a resource that should be added to the Uninstaller resource
+ archive. This method should be used by a ProductAction to ensure that any
+ resources that are necessary during an installation update or an
+ uninstallation are present. These resources can be retrieved at run-time
+ using the <A
+ HREF="../../../com/installshield/wizard/service/WizardServices.html#getResource(java.lang.String)">WizardServices.getResource()
+ </A> or <A
+ HREF="../../../com/installshield/wizard/Wizard.html#getResource(java.lang.String)">Wizard.getResource()
+ </A> method. These resources are saved separately from the class archive
+ in a dynamic resource archive that is updated each time the installation,
+ or the associated uninstallation, is run to completion. As a result,
+ these resources can be modified at run-time to store transient
+ information for use when the install/uninstall is run again.
+ <P>
+ For example, the <A
+ HREF="../../../com/installshield/product/actions/Files.html">Files </A>
+ ProductAction utilizes a general run-time resource to store information
+ on the files that it has installed, and uses that information at
+ uninstallation to determine what needs to be removed from the target
+ system.
+ <P>
+ The InputStream provided is used as the source for the resource, and is
+ stored in the installation archive as a resource with a relative path
+ name indicated by the "storageName" parameter.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>in</CODE> - The InputStream used as the source for the resource data.<DD><CODE>storageName</CODE> - The relative path name used to store the resource data
+            within the Uninstaller resource archive.
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - if an error occurred during the operation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putUninstallerDefinition(java.lang.Object, java.lang.Class, java.lang.String)"><!-- --></A><H3>
+putUninstallerDefinition</H3>
+<PRE>
+public void <B>putUninstallerDefinition</B>(java.lang.Object&nbsp;object,
+                                     java.lang.Class&nbsp;type,
+                                     java.lang.String&nbsp;storageName)
+                              throws java.io.IOException</PRE>
+<DL>
+<DD>Adds an object and its definition to the Uninstaller resource archive.
+ The indicated Object must be QJML compatible, and must have an associated
+ QJML file to allow for the serialization of the object as determined by
+ QJML. This method stores the serialized object as a resource, as well as
+ the associated QJML file (as a class resource) in the Uninstaller
+ resource archive.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>object</CODE> - The Object to be serialized and added.<DD><CODE>type</CODE> - The Class type of object.<DD><CODE>storageName</CODE> - The relative path name used for storage of the
+            serialized object.
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - if an error occurred during the operation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putUninstallerResource(java.net.URL, java.lang.String)"><!-- --></A><H3>
+putUninstallerResource</H3>
+<PRE>
+public void <B>putUninstallerResource</B>(java.net.URL&nbsp;resource,
+                                   java.lang.String&nbsp;storageName)
+                            throws java.io.IOException</PRE>
+<DL>
+<DD>Indicates a resource that should be added to the Uninstaller resource
+ archive. <EM>This method should be used by a ProductAction to ensure
+ that any resources that are necessary during an installation update or an
+ uninstallation will be present.</EM> These resources can be retrieved at
+ run-time using the <A
+ HREF="../../../com/installshield/wizard/service/WizardServices.html#getResource(java.lang.String)">WizardServices.getResource()
+ </A> or <A
+ HREF="../../../com/installshield/wizard/Wizard.html#getResource(java.lang.String)">Wizard.getResource()
+ </A> method. These resources are saved separately from the class archive
+ in a dynamic resource archive that is updated each time the installation,
+ or the associated uninstallation, is run to completion. As a result,
+ these resources can be modified at run-time to store transient
+ information for use when the install/uninstall is run again.
+ <P>
+ For example, the <A
+ HREF="../../../com/installshield/product/actions/Files.html">Files </A>
+ ProductAction utilizes a general run-time resource to store information
+ on the files that it has installed, and uses that information at
+ uninstallation to determine what needs to be removed from the target
+ system.
+ <P>
+ The provided URL is used as the source for the resource, and is stored in
+ the resource archive with a relative path name indicated by the
+ "storageName" parameter.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>resource</CODE> - The URL used as the source for the resource data.<DD><CODE>storageName</CODE> - The relative path name used to store the resource data
+            within the Uninstaller resource archive.
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - if an error occurred during the operation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putUninstallerResource(java.lang.String, java.lang.String)"><!-- --></A><H3>
+putUninstallerResource</H3>
+<PRE>
+public void <B>putUninstallerResource</B>(java.lang.String&nbsp;sourceName,
+                                   java.lang.String&nbsp;storageName)
+                            throws java.io.IOException</PRE>
+<DL>
+<DD>Indicates a resource that should be added to the Uninstaller resource
+ archive. <EM>This method should be used by a ProductAction to ensure
+ that any resources that are necessary during an installation update or an
+ uninstallation will be present.</EM> These resources can be retrieved at
+ run-time using the <A
+ HREF="../../../com/installshield/wizard/service/WizardServices.html#getResource(java.lang.String)">WizardServices.getResource()
+ </A> or <A
+ HREF="../../../com/installshield/wizard/Wizard.html#getResource(java.lang.String)">Wizard.getResource()
+ </A> method. These resources are saved separately from the class archive
+ in a dynamic resource archive that is updated each time the installation,
+ or the associated uninstallation, is run to completion. As a result,
+ these resources can be modified at run-time to store transient
+ information for use when the install/uninstall is run again.
+ <P>
+ For example, the <A
+ HREF="../../../com/installshield/product/actions/Files.html">Files </A>
+ ProductAction utilizes a general run-time resource to store information
+ on the files that it has installed, and uses that information at
+ uninstallation to determine what needs to be removed from the target
+ system.
+ <P>
+ The provided String indicates the path to the resource, and is stored in
+ the resource archive with a relative path name indicated by the
+ "storageName" parameter.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sourceName</CODE> - The path to the resource file.<DD><CODE>storageName</CODE> - The relative path name used to store the resource data
+            within the Uninstaller resource archive.
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - if an error occurred during the operation.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOperationState()"><!-- --></A><H3>
+getOperationState</H3>
+<PRE>
+public <A HREF="../../../com/installshield/wizard/service/MutableOperationState.html">MutableOperationState</A> <B>getOperationState</B>()</PRE>
+<DL>
+<DD>Returns the MutableOpe

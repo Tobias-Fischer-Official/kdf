@@ -1,0 +1,22 @@
+Anti-Admin:
+
+Notrufe
+Botkontrollen
+
+Normale:
+
+API-Benötigt
+Programmname
+Programmersteller
+Downloadlink
+Website/Forenthread
+Version
+HWID
+
+Zeitpunkte:
+
+Bei Notruf --> HWID, NR-Hash, Beschwerdeführer
+Bei Botkontrolle --> HWID, Antwort, Admin
+Bei erfolgreichem Login --> HWID, LoginDone, Antwortzeit
+Bei Instanzierung --> HWID, Programmname, API ja/nein, Programmhash
+				  --> Autor, Version, Downloadseite, Releaseseite, Supportseite

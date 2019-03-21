@@ -1,0 +1,62 @@
+e</A>, <A HREF="../../../com/installshield/qjml/PropertyAccessible.html">PropertyAccessible</A></DD>
+</DL>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../com/installshield/product/actions/AddGroupAction.html">AddGroupAction</A>, <A HREF="../../../com/installshield/product/actions/AddRequiredBytes.html">AddRequiredBytes</A>, <A HREF="../../../com/installshield/product/actions/AddUserAction.html">AddUserAction</A>, <A HREF="../../../com/installshield/product/actions/AntProcessor.html">AntProcessor</A>, <A HREF="../../../com/installshield/product/actions/AsciiFileUpdateProductAction.html">AsciiFileUpdateProductAction</A>, <A HREF="../../../com/installshield/product/actions/isus/ConfigureUpdateService.html">ConfigureUpdateService</A>, <A HREF="../../../com/installshield/product/actions/CopyDirectory.html">CopyDirectory</A>, <A HREF="../../../com/installshield/product/actions/CopyFile.html">CopyFile</A>, <A HREF="../../../com/installshield/product/actions/CreateDirectory.html">CreateDirectory</A>, <A HREF="../../../com/installshield/product/actions/DeleteAccountAction.html">DeleteAccountAction</A>, <A HREF="../../../com/installshield/product/actions/DeleteDirectory.html">DeleteDirectory</A>, <A HREF="../../../com/installshield/product/actions/DeleteFile.html">DeleteFile</A>, <A HREF="../../../com/installshield/product/actions/DesktopIcon.html">DesktopIcon</A>, <A HREF="../../../com/installshield/product/actions/EnvironmentVariableUpdate.html">EnvironmentVariableUpdate</A>, <A HREF="../../../com/installshield/product/actions/ExecAction.html">ExecAction</A>, <A HREF="../../../com/installshield/product/actions/Files.html">Files</A>, <A HREF="../../../com/installshield/product/actions/JVMResolution.html">JVMResolution</A>, <A HREF="../../../com/installshield/product/actions/Launcher.html">Launcher</A>, <A HREF="../../../com/installshield/product/actions/MoveDirectory.html">MoveDirectory</A>, <A HREF="../../../com/installshield/product/actions/MoveFile.html">MoveFile</A>, <A HREF="../../../com/installshield/product/ProductBeanPlaceHolder.html">ProductBeanPlaceHolder</A>, <A HREF="../../../com/installshield/product/actions/rpm/RPMOrFiles.html">RPMOrFiles</A>, <A HREF="../../../com/installshield/product/actions/UninstallerArchive.html">UninstallerArchive</A>, <A HREF="../../../com/installshield/product/actions/UninstallerLauncher.html">UninstallerLauncher</A>, <A HREF="../../../com/installshield/product/UninstallProductAction.html">UninstallProductAction</A>, <A HREF="../../../com/installshield/product/actions/UnixSymbolicLink.html">UnixSymbolicLink</A>, <A HREF="../../../com/installshield/product/actions/WaitProductAction.html">WaitProductAction</A>, <A HREF="../../../com/installshield/product/actions/XmlTransformer.html">XmlTransformer</A></DD>
+</DL>
+<HR>
+<DL>
+<DT>public class <B>ProductAction</B><DT>extends <A HREF="../../../com/installshield/product/ProductBean.html">ProductBean</A><DT>implements <A HREF="../../../com/installshield/qjml/PropertyAccessible.html">PropertyAccessible</A>, <A HREF="../../../com/installshield/product/ProductBuilder.html">ProductBuilder</A>, <A HREF="../../../com/installshield/product/MSIProductBuilder.html">MSIProductBuilder</A></DL>
+
+<P>
+The ProductAction class is the base class for all beans that can be added to
+ the product tree in a Universal project. All of the beans provided with
+ the Universal software are extended from this class. All custom beans
+ that are to be added to the product tree should also extend this class.
+ <P>
+ Product actions should have no UI associated with them at runtime. User
+ interaction should be handled through wizard beans, specifically wizard
+ panels. Their purpose is to manipulate the target machine in some way (e.g.,
+ installing files, changing system settings, creating desktop icons, etc.).
+ Universal provides a rich set of functionality for modifying the target
+ machine through the services API.
+ <P>
+ When writing custom product actions, the developer should understand the
+ following:
+ <ul>
+ <li>When the developer chooses to build their Universal project,
+ Universal invokes the "build" method for each product action. Product
+ actions are responsible for building themselves. The most common processing
+ performed at build time is to add resources (files, classes, required
+ services) to the installer archive produced by the build.
+ <li>When an end user executes the installer archive, for each product action
+ that is visited, the Universal framework invokes the "install" method.
+ Product actions need to include any code necessary to install themselves in
+ the "install" method.
+ <li>When the user uninstalls a product, the Universal framework invokes
+ the "uninstall" method for each product action that is being uninstalled.
+ </ul>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.installshield.util.Log"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Fields inherited from interface com.installshield.util.<A HREF="../../../com/installshield/util/Log.html">Log</A></B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../com/installshield/util/Log.html#DBG">DBG</A>, <A HREF="../../../com/installshield/util/Log.html#ERROR">ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#INTERNAL_ERROR">INTERNAL_ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#MSG1">MSG1</A>, <A HREF="../../..

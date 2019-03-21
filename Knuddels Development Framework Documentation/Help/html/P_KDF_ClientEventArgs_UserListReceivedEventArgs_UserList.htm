@@ -1,0 +1,133 @@
+the <A
+ HREF="../../../com/installshield/product/ProductAction.html#install(com.installshield.product.ProductActionSupport)">install()
+ </A> or <A
+ HREF="../../../com/installshield/product/ProductAction.html#uninstall(com.installshield.product.ProductActionSupport)">uninstall()
+ </A> methods of each active ProductAction object that is associated with the
+ installation ProductTree.
+ <P>
+ ProductActionSupport contains methods to allow the logging of events that
+ take place. These methods can be used to log events so that they are seen by
+ the end-user after the installation process has completed (in the
+ post-install summary panel).
+ <P>
+ In addition to logging functionality, this class provides methods that allow
+ each ProductAction access to the uninstaller. These methods are utilized by
+ the ProductAction to affect the resources that are built into the Uninstaller
+ resource archive. <EM>Custom ProductActions should use these methods to
+ store any resources that are required when the uninstallation is run, or when
+ an update installation takes place. In addition, these methods should be used
+ to exclude any unecessary resources from the uninstaller to reduce the
+ overhead of the uninstallation archive.</EM>
+ <P>
+ <STRONG>NOTES </STRONG>:
+ <LI>When adding classes and packages to the archive, dependencies are not
+ automatically added. Dependent classes and packages need to be <EM>
+ explicitly</EM> added.
+ <P>
+ <LI>General run-time resources are stored using the <A
+ HREF="ProductActionSupport.html#putUninstallerResource(java.io.InputStream, java.lang.String)">putUninstallerResource() </A>
+ methods, and are retrieved at run-time using the <A
+ HREF="../../../com/installshield/wizard/service/WizardServices.html#getResource(java.lang.String)">WizardServices.getResource()
+ </A> or <A
+ HREF="../../../com/installshield/wizard/Wizard.html#getResource(java.lang.String)">Wizard.getResource()
+ </A> method. These resources are saved separately from the class archive in a
+ dynamic resource archive that is updated each time the installation, or the
+ associated uninstallation, is run to completion. As a result, these resources
+ can be modified at run-time to store transient information for use when the
+ install/uninstall is run again.
+ <P>
+ For example, the <A
+ HREF="../../../com/installshield/product/actions/Files.html">Files </A>
+ ProductAction utilizes a general run-time resource to store information on
+ the files that it has installed, and uses that information at uninstallation
+ to determine what needs to be removed from the target system.
+ <P>
+ <LI>If the creation of a resource is required prior to archive creation, a
+ temporary resource can be created through the use of the <A
+ HREF="../../../com/installshield/util/FileUtils.html">FileUtils</A> 
+ method. Temporary files created using the methods in the <A
+ HREF="../../../com/installshield/util/FileUtils.html">FileUtils </A> class
+ are automatically removed after the installation has completed.
+ <P>
+ The ProductActionSupport class also provides access to the
+ MutableOperationState instance that is used to monitor the progress of the
+ install/uninstall operation. A MutableOperationState is used to monitor an
+ asynchronous operation, and provides a ProductAction with a simple way to
+ display its operation progress, as well as a way to monitor the current state
+ of the operation (e.g., suspended, canceled, etc.). <EM>A custom
+ ProductAction should use the MutableOperationState instance to update its
+ progress, as well as to monitor whether or not the process should be
+ continued.</EM>
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../com/installshield/wizard/service/MutableOperationState.html"><CODE>MutableOperationState</CODE></A>, 
+<A HREF="../../../com/installshield/wizard/service/AsynchronousOperation.html"><CODE>AsynchronousOperation</CODE></A></DL>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.installshield.util.Log"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Fields inherited from interface com.installshield.util.<A HREF="../../../com/installshield/util/Log.html">Log</A></B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../com/installshield/util/Log.html#DBG">DBG</A>, <A HREF="../../../com/installshield/util/Log.html#ERROR">ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#INTERNAL_ERROR">INTERNAL_ERROR</A>, <A HREF="../../../com/installshield/util/Log.html#MSG1">MSG1</A>, <A HREF="../../../com/installshield/util/Log.html#MSG2">MSG2</A>, <A HREF="../../../com/installshield/util/Log.html#WARNING">WARNING</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductActionSupport.html#ProductActionSupport(com.installshield.archive.ArchiveWriter, com.installshield.wizard.service.MutableOperationState, com.installshield.product.actions.UninstallerArchive)">ProductActionSupport</A></B>(<A HREF="../../../com/installshield/archive/ArchiveWriter.html">ArchiveWriter</A>&nbsp;resourceWriter,
+                     <A HREF="../../../com/installshield/wizard/service/MutableOperationState.html">MutableOperationState</A>&nbsp;operationState,
+                     <A HREF="../../../com/installshield/product/actions/UninstallerArchive.html">UninstallerArchive</A>&nbsp;archive)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The general constructor for a ProductActionSupport object, used to create
+ a ProductActionSupport object with a specific ArchiveWriter (for access
+ to the Uninstaller resource archive), a MutableOperationState (for
+ providing status updates), and the UninstallerArchive instance (for
+ access to the Uninstaller).</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductActionSupport.html#addLogListener(com.installshield.util.LogListener)">addLogListener</A></B>(<A HREF="../../../com/installshield/util/LogListener.html">LogListener</A>&nbsp;listener)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a LogListener to the registered LogListener objects.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../com/installshield/wizard/service/MutableOperationState.html">MutableOperationState</A></CODE></FONT></TD>
+<TD><CODE><B><A H

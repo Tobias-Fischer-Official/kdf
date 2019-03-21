@@ -1,0 +1,182 @@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a LogListener from the registered LogListener objects.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/installshield/product/ProductActionSupport.html#removeUninstallerResourceExclusion(java.lang.String)">removeUninstallerResourceExclusion</A></B>(java.lang.String&nbsp;resourceName)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a resource name from the list of resources that should not be
+ added to any Uninstaller.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TD><B>Methods inherited from class java.lang.Object</B></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=1><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TD>
+</TR>
+</TABLE>
+
+<A NAME="ProductActionSupport(com.installshield.archive.ArchiveWriter, com.installshield.wizard.service.MutableOperationState, com.installshield.product.actions.UninstallerArchive)"><!-- --></A><H3>
+ProductActionSupport</H3>
+<PRE>
+public <B>ProductActionSupport</B>(<A HREF="../../../com/installshield/archive/ArchiveWriter.html">ArchiveWriter</A>&nbsp;resourceWriter,
+                            <A HREF="../../../com/installshield/wizard/service/MutableOperationState.html">MutableOperationState</A>&nbsp;operationState,
+                            <A HREF="../../../com/installshield/product/actions/UninstallerArchive.html">UninstallerArchive</A>&nbsp;archive)</PRE>
+<DL>
+<DD>The general constructor for a ProductActionSupport object, used to create
+ a ProductActionSupport object with a specific ArchiveWriter (for access
+ to the Uninstaller resource archive), a MutableOperationState (for
+ providing status updates), and the UninstallerArchive instance (for
+ access to the Uninstaller).
+<P>
+<DT><B>Parameters:</B><DD><CODE>resourceWriter</CODE> - The ArchiveWriter used to create the resulting
+            uninstallation archive.<DD><CODE>operationState</CODE> - A MutableOperationState instance used to monitor
+            the progress of the install/uninstall operation.<DD><CODE>archive</CODE> - The UninstallerArchive used in the creation of the
+            uninstaller.</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TD>
+</TR>
+</TABLE>
+
+<A NAME="logEvent(java.lang.Object, java.lang.String, java.lang.Object)"><!-- --></A><H3>
+logEvent</H3>
+<PRE>
+public void <B>logEvent</B>(java.lang.Object&nbsp;origin,
+                     java.lang.String&nbsp;event,
+                     java.lang.Object&nbsp;msg)</PRE>
+<DL>
+<DD>Logs the specified event for post-install display purposes. This method
+ can be used by ProductActions to allow them to provide informational
+ messages (eg. warnings, errors, etc.) that are displayed through the
+ post-install summary panel.
+ <P>
+ <STRONG>NOTE </STRONG>: The <A
+ HREF="../../../com/installshield/util/Log.html">Log </A> interface
+ provides typical message types that should be used when logging events.
+ For example, the following code could be used to log a warning: <br>
+ <br>
+ <code>support.logEvent(this, Log.WARNING, "This is a warning.");</code>
+ <br>
+ <br>
+ The following code could be used to log an error: <br>
+ <br>
+ <code>support.logEvent(this, Log.ERROR, "This is a error!!!");</code>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/installshield/util/Log.html#logEvent(java.lang.Object, java.lang.String, java.lang.Object)">logEvent</A></CODE> in interface <CODE><A HREF="../../../com/installshield/util/Log.html">Log</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>origin</CODE> - The Object from which the message originated.<DD><CODE>event</CODE> - The event type (see <A
+            HREF="../../../com/installshield/util/Log.html">Log </A>
+            interface for typical event types).<DD><CODE>msg</CODE> - The Object used to determine the message to be displayed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addLogListener(com.installshield.util.LogListener)"><!-- --></A><H3>
+addLogListener</H3>
+<PRE>
+public void <B>addLogListener</B>(<A HREF="../../../com/installshield/util/LogListener.html">LogListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Adds a LogListener to the registered LogListener objects. These
+ LogListener objects are notified when a log event is triggered.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - The LogListener to add.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeLogListener(com.installshield.util.LogListener)"><!-- --></A><H3>
+removeLogListener</H3>
+<PRE>
+public void <B>removeLogListener</B>(<A HREF="../../../com/installshield/util/LogListener.html">LogListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Removes a LogListener from the registered LogListener objects.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>listener</CODE> - The LogListener to be removed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putUninstallerResourceExclusion(java.lang.String)"><!-- --></A><H3>
+putUninstallerResourceExclusion</H3>
+<PRE>
+public void <B>putUninstallerResourceExclusion</B>(java.lang.String&nbsp;resourceName)</PRE>
+<DL>
+<DD>Adds the resource name indicated to the list of resources that will be
+ excluded from any Uninstaller.
+ <P>
+ The name provided should be the path name of the resource that was used
+ when adding the resource to the archive using the <A
+ HREF="#putUninstallerResource(java.io.InputStream, java.lang.String)">putUninstallerResource </A> method.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>resourceName</CODE> - The relative resource path name of the resource to be
+            excluded.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeUninstallerResourceExclusion(java.lang.String)"><!-- --></A><H3>
+removeUninstallerResourceExclusion</H3>
+<PRE>
+public void <B>removeUninstallerResourceExclusion</B>(java.lang.String&nbsp;resourceName)</PRE>
+<DL>
+<DD>Removes a resource name from the list of resources that should not be
+ added to any Uninstaller.
+ <P>
+ <EM>The name provided should be same as that used when adding the
+ exclusion with the <A
+ HREF="#putUninstallerResourceExclusion(java.lang.String)">putUninstallerResourceExclusion
+ </A> method.</EM>
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>resourceName</CODE> - The relative resource path name of the resource
+            exclusion to be removed from the exclusion list.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="putInstalledDirectory(java.lang.String)"><!-- --></A><H3>
+putInstalledDirectory</H3>
+<PRE>
+public void <B>putInstalledDirectory</B>(java.lang.String&nbs
